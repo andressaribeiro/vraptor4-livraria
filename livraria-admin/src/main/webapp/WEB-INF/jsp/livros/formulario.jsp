@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -7,6 +8,18 @@
 		<title>Formulário Livraria</title>
 	</head>
 	<body>
+	
+		<ul class="errors">
+			
+			<c:forEach items="${errors}" var="error">
+				<li> 
+					${error.category}: 
+					${error.message}
+				</li>
+			</c:forEach>
+		
+		</ul>
+	
 		<form method="post" action="${linkTo[LivrosController].salva}">
 		
 			<input type="hidden" name="livro.id" value="${livro.id}" />
