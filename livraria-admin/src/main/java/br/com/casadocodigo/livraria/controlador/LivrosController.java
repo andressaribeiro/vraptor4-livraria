@@ -41,7 +41,7 @@ public class LivrosController {
 		Estante estante = new UmaEstanteQualquer();
 
 		if (livro.getTitulo() == null) {
-			validator.add(new SimpleMessage("titulo", "Título é obrigatório!"));
+			validator.add(new SimpleMessage("titulo", "Título é obrigatório"));
 		}
 
 		if (livro.getPreco() == null) {

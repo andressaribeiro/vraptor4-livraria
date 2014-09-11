@@ -17,7 +17,6 @@ public class Livro {
 
 	@Column(unique = true)
 	private String isbn;
-
 	private String titulo;
 	private String descricao;
 	private BigDecimal preco;
