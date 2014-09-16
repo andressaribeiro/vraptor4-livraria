@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
@@ -53,7 +54,7 @@ public class LivrosController {
 
 	@Transactional
 	@Post("/livros")
-	public void salva(Livro livro, UploadedFile capa) throws IOException {
+	public void salva(@Valid Livro livro, UploadedFile capa) throws IOException {
 
 		if (livro.getTitulo() == null) {
 			validator.add(new SimpleMessage("titulo", "Título é obrigatório"));

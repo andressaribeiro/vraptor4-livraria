@@ -18,7 +18,7 @@
 
 	<c:forEach items="${livroList}" var="livro">
 		<li>
-			<img src="${linkTo[LivrosController].capa(livro.isbn)}" width="70" height="100"> 
+			<img src="${linkTo[LivrosController].capa(livro.isbn)}" width="70" height="100" /> 
 			- ${livro.titulo} - ${livro.descricao}
 			<a href="${linkTo[LivrosController].edita}?isbn=${livro.isbn}">Modificar</a>
 		</li>

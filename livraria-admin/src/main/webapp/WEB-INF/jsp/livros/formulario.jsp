@@ -20,7 +20,7 @@
 		
 		</ul>
 	
-		<form method="post" action="${linkTo[LivrosController].salva}">
+		<form method="post" action="${linkTo[LivrosController].salva}" enctype="multipart/form-data">
 		
 			<input type="hidden" name="livro.id" value="${livro.id}" />
 		
