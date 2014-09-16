@@ -32,11 +32,11 @@
 				</li>
 
 				<li> Descrição: <br />
-					<textarea name="livro.descricao"> ${livro.descricao} </textarea> 
+					<textarea name="livro.descricao">${livro.descricao}</textarea> 
 				</li>
 				
 				<li> ISBN: <br />
-					<input type="text" name="livro.isbn" value="${livro.isbn} "/> 
+					<input type="text" name="livro.isbn" value="${livro.isbn}"/> 
 				</li>
 				
 				<li> Preço: <br />
@@ -45,6 +45,10 @@
 				
 				<li> Data de Publicação <br />
 					<input type="text" name="livro.dataPublicacao" value="${livro.dataPublicacao}" /> 
+				</li>
+
+				<li> Capa: <br /> 
+					<input type="file" name="capa" />
 				</li>
 			</ul>
 			

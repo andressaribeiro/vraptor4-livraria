@@ -3,9 +3,12 @@ package br.com.casadocodigo.livraria.persistencia;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.enterprise.inject.Vetoed;
+
 import br.com.casadocodigo.livraria.modelo.Estante;
 import br.com.casadocodigo.livraria.modelo.Livro;
 
+@Vetoed
 public class UmaEstanteQualquer implements Estante {
 
 	@Override

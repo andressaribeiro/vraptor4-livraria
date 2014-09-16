@@ -1,7 +1,7 @@
 package br.com.casadocodigo.livraria.modelo;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.net.URI;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +20,8 @@ public class Livro {
 	private String titulo;
 	private String descricao;
 	private BigDecimal preco;
-	private Calendar dataPublicacao;
+	private String dataPublicacao;
+	private String capa;
 
 	public String getTitulo() {
 		return titulo;
@@ -54,11 +55,11 @@ public class Livro {
 		this.preco = preco;
 	}
 
-	public Calendar getDataPublicacao() {
+	public String getDataPublicacao() {
 		return dataPublicacao;
 	}
 
-	public void setDataPublicacao(Calendar dataPublicacao) {
+	public void setDataPublicacao(String dataPublicacao) {
 		this.dataPublicacao = dataPublicacao;
 	}
 
@@ -68,6 +69,16 @@ public class Livro {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public URI getCapa() {
+		if (capa == null)
+			return null;
+		return URI.create(capa);
+	}
+
+	public void setCapa(URI capa) {
+		this.capa = capa == null ? null : capa.toString();
 	}
 
 }

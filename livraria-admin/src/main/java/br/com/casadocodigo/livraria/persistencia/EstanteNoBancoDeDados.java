@@ -2,6 +2,8 @@ package br.com.casadocodigo.livraria.persistencia;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import br.com.casadocodigo.livraria.modelo.Estante;
 import br.com.casadocodigo.livraria.modelo.Livro;
 
@@ -9,8 +11,16 @@ public class EstanteNoBancoDeDados implements Estante {
 
 	private LivroDAO dao;
 
+	@Inject
 	public EstanteNoBancoDeDados(LivroDAO dao) {
 		this.dao = dao;
+	}
+
+	/**
+	 * @deprecated para o CDI
+	 */
+	EstanteNoBancoDeDados() {
+		this(null);
 	}
 
 	@Override
