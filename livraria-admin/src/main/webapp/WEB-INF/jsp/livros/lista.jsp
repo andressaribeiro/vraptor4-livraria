@@ -23,5 +23,9 @@
 			<a href="${linkTo[LivrosController].edita}?isbn=${livro.isbn}">Modificar</a>
 		</li>
 	</c:forEach>
+	
+	<form method="post" action="${linkTo[LivrariaController].formulario}">
+		<input type="submit" value="Adicionar Livro" />
+	</form>
 </body>
 </html>
