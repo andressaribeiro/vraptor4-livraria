@@ -17,7 +17,7 @@
 				value="${login}" />
 			</li>
 
-			<li>Senha: <br /> <input type="text" name="senha"
+			<li>Senha: <br /> <input type="password" name="senha"
 				value="${senha}" />
 			</li>
 		</ul>

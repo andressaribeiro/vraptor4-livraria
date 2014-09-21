@@ -24,7 +24,7 @@
 		</li>
 	</c:forEach>
 	
-	<form method="post" action="${linkTo[LivrariaController].formulario}">
+	<form method="link" action="${linkTo[LivrosController].formulario}">
 		<input type="submit" value="Adicionar Livro" />
 	</form>
 </body>
