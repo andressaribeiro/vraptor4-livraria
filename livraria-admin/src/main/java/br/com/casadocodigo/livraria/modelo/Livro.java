@@ -1,9 +1,10 @@
 package br.com.casadocodigo.livraria.modelo;
 
-import java.math.BigDecimal;
 import java.net.URI;
+import java.util.Calendar;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,10 +18,13 @@ public class Livro {
 
 	@Column(unique = true)
 	private String isbn;
+	
+	@Embedded
+	private Dinheiro preco;
+	
 	private String titulo;
 	private String descricao;
-	private BigDecimal preco;
-	private String dataPublicacao;
+	private Calendar dataPublicacao;
 	private String capa;
 
 	public String getTitulo() {
@@ -47,19 +51,19 @@ public class Livro {
 		this.isbn = isbn;
 	}
 
-	public BigDecimal getPreco() {
+	public Dinheiro getPreco() {
 		return preco;
 	}
 
-	public void setPreco(BigDecimal preco) {
+	public void setPreco(Dinheiro preco) {
 		this.preco = preco;
 	}
 
-	public String getDataPublicacao() {
+	public Calendar getDataPublicacao() {
 		return dataPublicacao;
 	}
 
-	public void setDataPublicacao(String dataPublicacao) {
+	public void setDataPublicacao(Calendar dataPublicacao) {
 		this.dataPublicacao = dataPublicacao;
 	}
 
